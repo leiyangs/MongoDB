@@ -6,10 +6,10 @@
 ## 安装
 
 1. windows安装
-  MongoDB64位绿色版 链接: [https://pan.baidu.com/s/1EkAB2SrcU1mfMfff_WDxtA] 密码: w913
+  MongoDB64位绿色版 [链接](https://pan.baidu.com/s/1EkAB2SrcU1mfMfff_WDxtA) 密码: w913
 2. mac安装
-  先安装homebrew [http://brew.sh/]
-  使用brew安装mongodb ``` brew install mongodb ```
+  先安装[homebrew](http://brew.sh/)
+  使用brew安装mongodb ` brew install mongodb `
   再安装可视化工具 Robomongo
 
 ## MongoDB启动与连接
@@ -95,9 +95,33 @@ db.collection.update(
 db.student.update({name:"yl"},{$set:{name:"YL"}},{upsert: false})
 ```
 
-- query 查询条件,指定要更新符合哪些条件的文档
-- update 更新后的对象或指定一些更新的操作符
-- $set直接指定更新后的值
-- $inc在原基础上累加
-- upsert 可选，这个参数的意思是，如果不存在符合条件的记录时是否插入updateObj. 默认是false,不插入。
-- multi 可选，mongodb 默认只更新找到的第一条记录，如果这个参数为true,就更新所有符合条件的记录。
+- `query` 查询条件,指定要更新符合哪些条件的文档
+- `update` 更新后的对象或指定一些更新的操作符
+- `$set` 直接指定更新后的值
+- `$inc` 在原基础上累加 例`{$inc:{age:1}}`age每次加1
+- `$unset` 删除指定的键
+- `$push` 向数组中添加元素
+- `$ne` `$ne`类似于MYSQL的 `not in` 或者`not exists`
+- `$addToSet` 向集合中添加元素
+- `$pull` 向集合中删除元素
+- `$each` 把数组中的元素逐个添加到集合中
+- `$pop` 从数组中移除指定的索引中对应的元素
+- `upsert` 可选，这个参数的意思是，如果不存在符合条件的记录时是否插入updateObj. 默认是false,不插入。
+- `multi` 可选，mongodb 默认只更新找到的第一条记录，如果这个参数为true,就更新所有符合条件的记录。
+
+## 文档的删除
+
+```sql
+db.collection.remove(
+   <query>,
+   {
+     justOne: <boolean>
+   }
+)
+```
+
+## 查询文档
+
+```sql
+db.collection_name.find()
+```
