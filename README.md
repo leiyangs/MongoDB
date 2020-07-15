@@ -106,7 +106,7 @@ db.student.update({name:"yl"},{$set:{name:"YL"}},{upsert: false})
 - `$pull` 向集合中删除元素
 - `$each` 把数组中的元素逐个添加到集合中
 - `$pop` 从数组中移除指定的索引中对应的元素
-- `upsert` 可选，这个参数的意思是，如果不存在符合条件的记录时是否插入updateObj. 默认是false,不插入。
+- `upsert` 可选，这个参数的意思是，如果不存在符合条件的记录时是否插入`upsert:true`. 默认是false,不插入。
 - `multi` 可选，mongodb 默认只更新找到的第一条记录，如果这个参数为true,就更新所有符合条件的记录。
 
 ## 文档的删除
