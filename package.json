@@ -1,0 +1,23 @@
+{
+  "name": "MongoDB",
+  "version": "1.0.0",
+  "description": "- MongoDB是一个基于分布式文件存储的开源数据库系统\r - MongoDB 将数据存储为一个文档，数据结构由键值(key=>value)对组成。MongoDB 文档类似于 JSON 对象。字段值可以包含其他文档，数组及文档数组。",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leiyangs/MongoDB.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leiyangs/MongoDB/issues"
+  },
+  "homepage": "https://github.com/leiyangs/MongoDB#readme",
+  "dependencies": {
+    "mongoose": "^5.9.25"
+  }
+}

@@ -125,3 +125,7 @@ db.collection.remove(
 ```sql
 db.collection_name.find()
 ```
+
+## 在node中使用
+
+   mongoose
