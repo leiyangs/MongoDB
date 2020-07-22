@@ -15,7 +15,7 @@ let UserSchema = new mongoose.Schema({
   },
   password: {
     type: Number
-  },
+  }, 
   create_time: {
     type: Date,
     default: Date.now
