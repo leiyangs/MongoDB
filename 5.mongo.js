@@ -22,8 +22,9 @@ let UserSchema = new mongoose.Schema({
   }
 });
 
+// 前置 在保存之前
 UserSchema.pre('save', function (next) {
-  this.password = crypto.createHmac('sha256', 'zfpx').update(this.password).digest('hex');
+  this.password = crypto.createHmac('sha256', 'yan').update(this.password).digest('hex');
   next();
 });
 // 加盐
